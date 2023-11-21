@@ -1,0 +1,42 @@
+@model Player
+@using(Html.BeginForm())
+{
+    <div class='form-horizontal'>
+
+        <div class='form-group'>
+            @Html.DisplayNameFor(m=>m.Id)
+            @Html.EditorFor(m=>m.Id)
+        </div>
+
+         <div class='form-group'>
+            @Html.DisplayNameFor(m=>m.Name)
+            @Html.EditorFor(m=>m.Name)
+        </div>
+        
+         <div class='form-group'>
+            @Html.DisplayNameFor(m=>m.Age)
+            @Html.EditorFor(m=>m.Age)
+        </div>
+        
+         <div class='form-group'>
+            @Html.DisplayNameFor(m=>m.Category)
+            @Html.EditorFor(m=>m.Category)
+        </div>
+
+           <div class='form-group'>
+            @Html.DisplayNameFor(m=>m.BiddingAmount)
+            @Html.EditorFor(m=>m.BiddingAmount)
+        </div>
+
+        <div>
+    @Html.DisplayNameFor(m=>m.TeamId)
+     @Html.EditorFor(m=>m.TeamId)
+      @Html.ValidationMessageFor(m=>m.TeamId)
+</div>
+
+
+    </div>
+<br>
+    <input type="submit" value="Save">
+
+}

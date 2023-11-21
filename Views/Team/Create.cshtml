@@ -1,0 +1,21 @@
+@model Team
+ 
+<h2>Team</h2>
+<hr>
+@using (Html.BeginForm())
+{
+ 
+<div>
+    @Html.DisplayNameFor(m=>m.TeamName)
+     @Html.EditorFor(m=>m.TeamName)
+      @Html.ValidationMessageFor(m=>m.TeamName)
+</div>
+ 
+<br>
+<input type = "submit" value = "Save">
+}
+ 
+<br>
+<br>
+
+

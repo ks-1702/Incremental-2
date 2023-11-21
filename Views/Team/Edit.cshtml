@@ -1,0 +1,23 @@
+@using System.Data
+@model dotnetapp.Models.Team
+ 
+<h2>Teams</h2>
+<hr>
+@using (Html.BeginForm())
+{
+ @Html.DisplayNameFor(m=>m.TeamId)
+     @Html.EditorFor(m=>m.TeamId)
+      @Html.ValidationMessageFor(m=>m.TeamId)
+<div>
+    @Html.DisplayNameFor(m=>m.TeamName)
+     @Html.EditorFor(m=>m.TeamName)
+      @Html.ValidationMessageFor(m=>m.TeamName)
+</div>
+   
+ 
+    <input type = "submit" value = "Save">
+}
+ 
+<br>
+<br>
+ 

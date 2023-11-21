@@ -1,0 +1,12 @@
+@model dotnetapp.Models.Team
+<h2>Deleting record </h2>
+<hr>
+@using (Html.BeginForm())
+{
+<p>@Html.DisplayNameFor(m=>m.TeamId):@Html.DisplayFor(m=>m.TeamId)</p>
+<p>@Html.DisplayNameFor(m=>m.TeamName):@Html.DisplayFor(m=>m.TeamName)</p>
+ 
+<input type="submit" value="Delete?" style="background-color: aqua;">
+ 
+}
+@Html.ActionLink("Back to List","Index")

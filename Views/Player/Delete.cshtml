@@ -1,0 +1,15 @@
+@model Player
+<h2> Deleting record of @Model</h2>
+<p>@Html.DisplayNameFor(m=>m.Id) : @Html.DisplayFor(m=>m.Id)</p>
+<p>@Html.DisplayNameFor(m=>m.Name) : @Html.DisplayFor(m=>m.Name)</p>
+<p>@Html.DisplayNameFor(m=>m.Age) : @Html.DisplayFor(m=>m.Age)</p>   
+<p>@Html.DisplayNameFor(m=>m.Category) : @Html.DisplayFor(m=>m.Category)</p>  
+ <p>@Html.DisplayNameFor(m=>m.BiddingAmount) : @Html.DisplayFor(m=>m.BiddingAmount)</p>
+ <p>@Html.DisplayNameFor(m=>m.TeamId) : @Html.DisplayFor(m=>m.TeamId)</p>
+ <hr>
+ @using(Html.BeginForm())
+ {
+    <input type="submit" value="Delete ?" style="background-color: red;">
+
+ }
+@Html.ActionLink("Back to List","Index")

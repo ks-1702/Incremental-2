@@ -1,0 +1,26 @@
+@model IEnumerable<dotnetapp.Models.Team>
+ 
+<h1>Teams list</h1>
+<hr>
+@Html.ActionLink("Add Record","Create")
+<hr>
+<table class = 'table'>
+    <thead>
+ 
+        <th>@Html.DisplayNameFor(m=>m.TeamId)</th>
+        <th>@Html.DisplayNameFor(m=>m.TeamName)</th>
+ 
+    </thead>
+    <tbody>
+        @foreach(var data in Model)
+        {
+            <tr>
+                <td>@data.TeamId</td>
+                <td>@data.TeamName</td>
+                <td>@Html.ActionLink("Edit","Edit",new{id=@data.TeamId})</td>&nbsp;&nbsp;
+                <td>@Html.ActionLink("Delete","Delete",new{id=@data.TeamId})</td>&nbsp;&nbsp;
+            </tr>
+           
+        }
+    </tbody>
+</table>
